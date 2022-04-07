@@ -32,18 +32,38 @@ a, button {
 
 .mainNav {
   display: flex;
-  align-items: center;
-  padding: 1.5rem 5rem;
-  background-color: #212529;
+  align-items: start;
+  padding: 2.5rem 5rem;
+  background-color: rgba(33, 37, 41, 0);
   width: 100vw;
   position: fixed;
+  height: 6rem;
   top: 0px;
+  z-index: 1;
+  transition: background-color .2s linear, padding .3s linear, height .1s linear;
+}
+
+.topSmallNav {
+  display: flex;
+  align-items: center;
+  width: 100%;
   z-index: 1;
 }
 
+.mainNav.scrolled {
+  background-color: rgba(33, 37, 41, 1);
+  padding: 1.6rem 6rem 2rem 6rem;
+}
+
+.mainNav.scrolled .logo {
+  height: 1.75rem;
+  margin-top: 0.5rem;
+}
+
 .logo {
-  height: 2rem;
+  height: 2.25rem;
   margin-right: auto;
+  transition: height .3s linear;
 }
 
 .mainMenu {
@@ -53,7 +73,10 @@ a, button {
  font-weight: 400;
  letter-spacing: .1rem;
  margin-left: 1rem;
+ margin-top: 0.75rem;
 }
+
+
 
 .mainMenu > li > a:hover {
   color: #ffc800
@@ -67,12 +90,13 @@ a, button {
   background-size: cover;
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .welcomeContent {
   color: white;
   width: 100%;
-  height: 275px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -462,4 +486,79 @@ footer {
   cursor: pointer;
   font-size: .9rem;
   color: #212529;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 6.25rem;
+  border-radius: 4px;
+  display: none;
+}
+
+.menu.clicked {
+  box-shadow: 0 0 0 0.25rem;
+}
+
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1rem;
+  height: 0.75rem;
+}
+
+.hamburger > * {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.55);
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 975px) {
+  .menu {
+    display: flex;
+  }
+
+  .mainMenu {
+    display: none;
+    opacity: 0;
+  }
+
+  .mainMenu.clicked {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    opacity: 1;
+  }
+
+  .mainNav.clicked {
+    flex-direction: column;
+    align-items: start;
+    height: 21rem;
+  }
+
+  footer {
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .footer-bottom {
+    display: flex;
+  }
 }

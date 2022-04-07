@@ -13,13 +13,23 @@
 <body>
   <header>
     <nav class="mainNav">
+      <div class="topSmallNav">
       <img class="logo" src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg" />
+      <div class="menu">
+      <h3>Menu </h3>  
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
       <ul class="mainMenu">
-        <li><a href="">SERVICES</a></li>
-        <li><a href="">PORTFOLIO</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">TEAM</a></li>
-        <li><a href="">CONTACT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
     <section class="headerWelcome">
@@ -32,9 +42,9 @@
   </header>
 
   <main>
-    <section class="services">
+    <section class="services" id="services">
       <div class="title">
-        <h2>SERVICES</h2>
+        <h2 >SERVICES</h2>
         <h5 class="roboto italic">Lorem ipsum dolor sit amet consectetur.</h5>
       </div>
       <div class="serviceContainer">
@@ -55,9 +65,9 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="title">
-        <h2>PORTFOLIO</h2>
+        <h2 >PORTFOLIO</h2>
         <h5 class="roboto italic">Lorem ipsum dolor sit amet consectetur.</h5>
       </div>
       <div class="portfolioContainer">
@@ -120,9 +130,9 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <div class="title">
-        <h2>ABOUT</h2>
+        <h2 >ABOUT</h2>
         <h5 class="roboto italic">Lorem ipsum dolor sit amet consectetur.</h5>
       </div>
       <ul class="timeline">
@@ -169,7 +179,7 @@
             </li>
       </ul>
     </section>
-    <section class="team">
+    <section id="team" class="team">
       <div class="title">
         <h2>OUR AMAZING TEAM</h2>
         <h5 class="roboto italic">Lorem ipsum dolor sit amet consectetur.</h5>
@@ -219,7 +229,7 @@
       <img class="companyLogo" src="https://startbootstrap.github.io/startbootstrap-agency/assets/img/logos/ibm.svg">
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="title">
         <h2>CONTACT US</h2>
         <h5 class="roboto italic">Lorem ipsum dolor sit amet consectetur.</h5>
@@ -247,9 +257,14 @@
       <div class="icon">f</div>
       <div class="icon">in</div>
     </div>
-    <p class="privacy links">Privacy Policy</p>
-    <p class="links">Terms of Use</p>
+    <div class="footer-bottom">
+      <p class="privacy links">Privacy Policy</p>
+      <p class="links">Terms of Use</p>
+
+    </div>
   </footer>
   
+
+  <script src="index.js"></script>
 </body>
 </html>
